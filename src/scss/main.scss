@@ -1,0 +1,12 @@
+// sanitize.css (normalize.css)
+// @import '../scss/sanitize/sanitize.scss';
+// @import '../scss/sanitize/forms.scss';
+// @import '../scss/sanitize/assets.scss';
+
+// normalize.scss
+@import './normalize/normalize';
+
+@import './variables';
+@import './defaults';
+@import './mixins';
+@import './typography'
