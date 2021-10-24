@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeightNormal;
+
+    background-color: $colorWhite;
+}
+
+.container {
+    min-height: 100vh;
+    min-width: 360px;
+    
+    background: url('../images/image-hero-mobile.jpg'), linear-gradient($colorWhite, $colorWhite) ;
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    @include media(tablet) {
+        background: url('../images/image-hero-desktop.jpg'), linear-gradient($colorWhite, $colorWhite) ;
+    
+        background-repeat: no-repeat;
+        background-size: 100% cover;
+    }
+
+    @include media(desktop) {
+        width: 1440px;
+        margin: 0 auto;
+
+    }
+}

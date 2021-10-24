@@ -7,6 +7,52 @@
   <title>Insert Title Here</title>
 </head>
 <body>
+  <div class="container">
+    <nav class="nav">
+      <img class='nav__logo' src="./images/logo.svg" alt="nav__logo">
+
+      <ul class="nav__links">
+        <li class="nav__item">
+          <a href="#">about</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">discover</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">get started</a>
+        </li>
+      </ul>
+
+      <button id='openMobileMenu'class="nav__mobile-menu">
+        <img src="./images/icon-hamburger.svg" alt="open_menu">
+      </button>
+
+    </nav>
+
+    <nav class="nav-mobile">
+      <div class="nav-mobile__header">
+        <img class='nav__logo' src="./images/logo.svg" alt="nav__logo">
+        <button id="closeMobileMenu" class="nav__mobile-menu">
+          <img src="./images/icon-close-menu.svg" alt="close_menu">
+        </button>
+      </div>
+
+      <ul class="nav-mobile__list">
+        <li class="nav-mobile__item">
+          <a href="#">about</a>
+        </li>
+        <li class="nav-mobile__item">
+          <a href="#">discover</a>
+        </li>
+        <li class="nav-mobile__item">
+          <a href="#">get started</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+    <template>
+
+    
   About
   Discover
   Get Started
@@ -106,5 +152,6 @@
   Got it!
 
   <!-- Success modal end -->
+</template>
 </body>
 </html>

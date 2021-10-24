@@ -1,0 +1,16 @@
+.open-modal {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+}
+
+.disabled {
+    //display: none !important;
+    opacity: 0 !important;
+}
+
+.caption {
+    font-size: 18px;
+    color: $colorDark;
+    font-weight: $fontWeightBold;
+    line-height: 22px;
+}
