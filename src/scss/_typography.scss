@@ -24,6 +24,28 @@
         }
     }
 
+.caption__pledge {
+    font-size: 14px;
+    color: $colorDark;
+    font-weight: $fontWeightBolder;
+    line-height: 17px;
+
+    &--green {
+        color: $colorPirimaryLight;
+        font-weight: $fontWeightBold;
+    }
+
+    @include media(laptop) {
+        font-size: 18px;
+        line-height: 22px;
+
+        &--green {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+}
+
 .text {
     font-size: 14px;
     color: $colorDarkLight;
@@ -55,5 +77,29 @@
         &:hover {
             background-color: $colorPrimary;
         }
+    }
+}
+
+.btn-pledge {
+    font-size: 14px;
+    color: $colorWhiteLight;
+    font-weight: $fontWeightBolder;
+    line-height: 17px;
+    border-radius: 33.5px;
+    letter-spacing: 0.4px;
+
+    background-color: $colorPirimaryLight;
+    cursor: pointer;
+
+    padding: 15px 33px 16px 32px;
+    transition: $transition;  
+
+    &:hover {
+        background-color: $colorPrimary;
+    }   
+    
+    &__disabled {
+        background-color: $colorDarkLight;
+        pointer-events: none;
     }
 }
