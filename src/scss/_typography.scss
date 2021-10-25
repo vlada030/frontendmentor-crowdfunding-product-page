@@ -39,9 +39,15 @@
     letter-spacing: 0.4px;
 
     padding: 17px 42px 19px;
+    cursor: pointer;
+    transition: $transition;
 
     &--green {
         background-color: $colorPirimaryLight;
         color: $colorWhiteLight;
+
+        &:hover {
+            background-color: $colorPrimary;
+        }
     }
 }

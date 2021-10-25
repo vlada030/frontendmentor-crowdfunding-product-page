@@ -4,18 +4,18 @@
     justify-content: space-between;
 
     padding: 32px 24px 36px 24px;
-    margin-bottom: 128px;
+    margin-bottom: 156px;
 
     transition: $transition;
     opacity: 1;
 
     @include media(tablet) {
         padding: 48px 11.458%;
-        margin-bottom: 70px;
+        margin-bottom: 98px;
     }
 
     @include media(laptop) {
-        margin-bottom: 164px;
+        margin-bottom: 192px;
     }
 
     &__logo {
@@ -87,6 +87,8 @@
     transform: translateX(100%);
     opacity: 0;
     transition: $transition;
+
+    z-index: 20;
 
     @include media(tablet) {
         padding: 32px 20% 36px 20%;

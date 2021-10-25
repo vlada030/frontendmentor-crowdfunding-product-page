@@ -13,25 +13,25 @@
 
     &__header {
         text-align: center;
-        background: linear-gradient(transparent 28px, $colorWhiteLight 29px);
+        background: $colorWhiteLight;
         border-radius: 8px;
-        overflow: hidden;
 
-        padding: 0 24px 40px 24px;
+        padding: 52px 24px 40px 24px;
+        margin-bottom: 24px;
+
+        position: relative;
 
         @include media(laptop) {
-            padding: 0 48px 48px 48px;
+            padding: 56px 48px 48px 48px;
         }
 
         .logo {
-            display: block;
             width: 56px;
-            margin: 0 auto;
-            margin-bottom: 24px;
 
-            @include media(laptop) {
-                margin-bottom: 28px;
-            }
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         h1 {
@@ -39,7 +39,7 @@
             color: $colorDark;
             font-weight: $fontWeightBolder;
             line-height: 24px;
-            
+
             padding: 0 20px;
             margin: 0;
             margin-bottom: 16px;
@@ -65,19 +65,170 @@
             align-items: center;
             justify-content: space-between;
 
-            @include media(laptop) {
-                padding: 0 48px;
-            }
-
             .bookmark {
                 display: grid;
                 place-items: center;
 
-                background-color: transparent;
+                border-radius: 33.5px;
 
                 svg {
                     height: 56px;
                 }
+
+                span {
+                    display: none;
+                }
+
+                @include media(tablet) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    cursor: pointer;
+
+                    &:hover svg {
+                        circle {
+                            fill: #707070;
+                        }
+                    }
+
+                    &.active {
+                        svg {
+                            circle {
+                                fill: $colorPrimary;
+                            }
+
+                            path {
+                                fill: $colorWhite;
+                            }
+                        }
+
+                        span {
+                            color: $colorPrimary;
+                        }
+                    }
+
+                    svg {
+                        margin-right: 16px;
+
+                        circle {
+                            transition: $transition;
+                        }
+                    }
+
+                    span {
+                        display: inline-block;
+                        text-transform: capitalize;
+
+                        font-size: 16px;
+                        color: $colorDarkLight;
+                        font-weight: $fontWeightBolder;
+                        line-height: 20px;
+                        letter-spacing: 0.1px;
+
+                        margin-right: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__stats {
+        background-color: $colorWhiteLight;
+        text-align: center;
+        border-radius: 8px;
+
+        padding: 32px 24px 40px 24px;
+        margin-bottom: 24px;
+
+        @include media(laptop) {
+            text-align: left;
+            padding: 48px;
+        }
+
+        .list {
+            margin-bottom: 32px;
+
+            @include media(laptop) {
+                margin-bottom: 37px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+        }
+
+        .item {
+
+            @include media(laptop) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .wrapper {
+
+                @include media(laptop) {
+                    margin-right: 42px;
+
+            
+                }
+
+                h3 {
+                    font-size: 32px;
+                    color: $colorDark;
+                    font-weight: $fontWeightBolder;
+                    line-height: 40px;
+
+                    margin-bottom: 9px;
+
+                    @include media(laptop) {
+                        margin-bottom: 9px;
+                    }
+                }
+    
+                p {
+                    font-size: 14px;
+                    color: $colorDarkLight;
+                    font-weight: $fontWeightNormal;
+                    line-height: 17px;
+
+                    margin-bottom: 24px;
+
+                    @include media(laptop) {
+                        font-size: 15px;
+                        line-height: 18px;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+
+            .line {
+                height: 1px;
+                background-color: rgba($colorDark, 0.15);
+                width: 80px;
+                margin: 0 auto;
+                margin-bottom: 24px;
+
+                @include media(laptop) {
+                    width: 1px;
+                    height: 63px;
+                    margin-bottom: 0px;
+                    margin-right: 47px;
+                }
+            }            
+        }
+
+        .progress {
+            height: 12px;
+            background-color: rgba($colorDark, 0.05);
+            border-radius: 33.5px;
+
+            & > div {
+                height: 12px;
+                width: 60%;
+                border-radius: 33.5px;
+
+                background-color: $colorPirimaryLight;
             }
         }
     }
