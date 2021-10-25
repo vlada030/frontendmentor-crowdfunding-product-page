@@ -232,4 +232,46 @@
             }
         }
     }
+
+    &__about {
+        padding: 40px 24px;
+        background-color: $colorWhiteLight;
+        border-radius: 8px;
+
+        @include media(laptop) {
+            padding: 48px;
+        }
+
+        h2 {
+            margin-bottom: 24px;
+
+            @include media(laptop) {
+                margin-bottom: 35px;
+            }
+        }
+
+        p { 
+            @extend .text;
+
+            @include media(laptop) {
+                line-height: 30px;
+            }
+
+            &:first-of-type {
+                margin-bottom: 24px;
+
+                @include media(laptop) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &:nth-of-type(2) {
+                margin-bottom: 35px;
+
+                @include media(laptop) {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+    }
 }

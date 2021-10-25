@@ -16,7 +16,13 @@
     color: $colorDark;
     font-weight: $fontWeightBold;
     line-height: 22px;
-}
+
+    @include media(laptop) {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: $fontWeightBolder;
+        }
+    }
 
 .text {
     font-size: 14px;
