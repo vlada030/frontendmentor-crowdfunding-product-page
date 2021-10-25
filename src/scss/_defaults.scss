@@ -26,16 +26,16 @@ body {
     min-height: 100vh;
     min-width: 360px;
     
-    background: url('../images/image-hero-mobile.jpg'), linear-gradient($colorWhite, $colorWhite) ;
+    background: linear-gradient($colorDark, rgba($colorDark, 0.0001)), url('../images/image-hero-mobile.jpg') ;
     
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 128px, contain;
     
     @include media(tablet) {
-        background: url('../images/image-hero-desktop.jpg'), linear-gradient($colorWhite, $colorWhite) ;
+        background: linear-gradient($colorDark, rgba($colorDark, 0.0001)),url('../images/image-hero-desktop.jpg');
     
         background-repeat: no-repeat;
-        background-size: 100% cover;
+        background-size: 100% 128px, 100%;
     }
 
     @include media(desktop) {

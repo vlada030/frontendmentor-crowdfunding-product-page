@@ -3,9 +3,12 @@
     opacity: 1 !important;
 }
 
-.disabled {
-    //display: none !important;
+.disabled-fade {
     opacity: 0 !important;
+}
+
+.disabled{
+    display: none !important;
 }
 
 .caption {
@@ -13,4 +16,32 @@
     color: $colorDark;
     font-weight: $fontWeightBold;
     line-height: 22px;
+}
+
+.text {
+    font-size: 14px;
+    color: $colorDarkLight;
+    font-weight: $fontWeightNormal;
+    line-height: 24px;
+
+    @include media(laptop) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.btn {
+
+    font-size: 16px;
+    font-weight: $fontWeightBolder;
+    line-height: 20px;
+    border-radius: 33.5px;
+    letter-spacing: 0.4px;
+
+    padding: 17px 42px 19px;
+
+    &--green {
+        background-color: $colorPirimaryLight;
+        color: $colorWhiteLight;
+    }
 }

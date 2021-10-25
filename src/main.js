@@ -12,7 +12,7 @@ const closeMobileMenu = document.getElementById("closeMobileMenu")
 
     window.addEventListener('click', e => {        
         if (e.target.closest('#openMobileMenu') || e.target.closest('#closeMobileMenu')) {
-            nav.classList.toggle('disabled')
+            nav.classList.toggle('disabled-fade')
             mobileMenu.classList.toggle("open-modal");
         }
     })
