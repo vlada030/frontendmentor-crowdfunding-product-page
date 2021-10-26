@@ -36,13 +36,18 @@
 
                 background-color: transparent;
 
+                h2 {
+                    @extend .caption;
+                    font-weight: $fontWeightBolder;
+                }
+
                 svg {
                     width: 14px;
                 }
             }
         }
 
-        .modal-pledge {
+        .pledge-option {
             border: 1px solid rgba($colorDark, 0.15);
             border-radius: 8px;
 
@@ -50,21 +55,82 @@
             margin-bottom: 24px;
 
             & > .wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
+                // display: flex;
+                // align-items: center;
+                // justify-content: flex-start;
 
-                margin-bottom: 33px;
+                margin-bottom: 24px;
 
-                [type="radio"] {
-                    margin-right: 16px;
+                .radio-wrapper {
+                    display: block;
+                    cursor: pointer;
+                    user-select: none;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    position: relative;
+
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                    }
+
+                    .checkmark {
+                        // position: absolute;
+                        // top: 0;
+                        // left: 0;
+                        position: relative;
+                        height: 24px;
+                        width: 24px;
+                        margin-right: 16px;
+
+                        border: 1px solid rgba($colorDark, 0.15);
+                        border-radius: 50%;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background: $colorPirimaryLight;
+                            display: none;
+                        }
+
+                    }
+
+                    .fixed-height {
+                        height: 42px;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .mb {
+                        margin-bottom: 8px;
+                    }
+
+                    input:checked ~ .checkmark::after {
+                        display: block;
+                    }
+                }
+
+                h3 {
+                    //height: 42px;
+                    margin-left: 40px;
                 }
             }
 
             p.text {
                 margin-bottom: 8px;
             }
-            
         }
     }
 }

@@ -226,7 +226,7 @@
             <div class="modal modal__pledge">
                 <div class="modal-container">
                     <nav class="modal-nav">
-                        <h2 class="caption">Back this project</h2>
+                        <h2>Back this project</h2>
 
                         <button id="closeModal" class="modal-nav__close">
                             <svg
@@ -249,18 +249,23 @@
                         Monitor Riser out in the world?
                     </p>
 
-                    <article class="modal-pledge">
+                    <article class="pledge-option">
                         <div class="wrapper">
-                            <input
+                            <label class="radio-wrapper">
+                                
+                                <input
                                 type="radio"
                                 name="pledge"
                                 id="noPledge"
-                                value="false"
-                            />
-                            <h3 class="caption__pledge">
-                                Pledge with no reward
-                            </h3>
+                                />
+                                <span class="checkmark"></span>
+
+                                <div class="fixed-height">
+                                    <p class="caption__pledge">Pledge with no reward</p>
+                                </div>
+                            </label>
                         </div>
+
                         <p class="text">
                             Choose to support us without a reward if you simply
                             believe in our project. As a backer, you will be
@@ -268,18 +273,22 @@
                         </p>
                     </article>
 
-                    <article class="modal-pledge">
+                    <article class="pledge-option">
                         <div class="wrapper">
-                            <input
+                            <label class="radio-wrapper">
+                                
+                                <input
                                 type="radio"
                                 name="pledge"
-                                id="noPledge"
-                                value="false"
-                            />
-                            <h3 class="caption__pledge">
-                                Bamboo Stand
-                                <p>Pledge $25 or more</p>
-                            </h3>
+                                id="pledge-25"
+                                />
+
+                                <span class="checkmark"></span>
+                                <div class="fixed-height">
+                                    <p class="caption__pledge mb">Bamboo Stand</p>
+                                    <p class="caption__pledge caption__pledge--green">Pledge $25 or more</p>
+                                </div>
+                            </label>
                         </div>
                         <p class="text">
                             You get an ergonomic stand made of natural bamboo.
