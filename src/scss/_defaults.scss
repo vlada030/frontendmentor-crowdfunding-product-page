@@ -30,6 +30,8 @@ body {
     
     background-repeat: no-repeat;
     background-size: 100% 128px, contain;
+
+    position: relative;
     
     @include media(tablet) {
         background: linear-gradient($colorDark, rgba($colorDark, 0.0001)),url('../images/image-hero-desktop.jpg');

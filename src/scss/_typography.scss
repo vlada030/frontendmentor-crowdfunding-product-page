@@ -7,7 +7,7 @@
     opacity: 0 !important;
 }
 
-.disabled{
+.disabled {
     display: none !important;
 }
 
@@ -21,8 +21,8 @@
         font-size: 20px;
         line-height: 24px;
         font-weight: $fontWeightBolder;
-        }
     }
+}
 
 .caption__pledge {
     font-size: 14px;
@@ -59,7 +59,6 @@
 }
 
 .btn {
-
     font-size: 16px;
     font-weight: $fontWeightBolder;
     line-height: 20px;
@@ -92,12 +91,12 @@
     cursor: pointer;
 
     padding: 15px 33px 16px 32px;
-    transition: $transition;  
+    transition: $transition;
 
     &:hover {
         background-color: $colorPrimary;
-    }   
-    
+    }
+
     &__disabled {
         background-color: $colorDarkLight;
         pointer-events: none;
@@ -105,18 +104,43 @@
 }
 
 .overlay {
-
     position: relative;
     z-index: inherit;
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
         background-color: rgba($colorWhiteLight, 0.5);
+        border-radius: inherit;
         z-index: 1;
+    }
+}
+
+.pledge-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &.text {
+        margin-bottom: 8px;
+    }
+
+    .left {
+        font-size: 32px;
+        color: $colorDark;
+        line-height: 39px;
+        font-weight: $fontWeightBolder;
+        margin-right: 8px;
+    }
+
+    .right {
+        font-size: 15px;
+        color: $colorDarkLight;
+        font-weight: $fontWeightNormal;
+        line-height: 18px;
     }
 }

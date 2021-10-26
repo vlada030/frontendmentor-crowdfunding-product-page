@@ -215,23 +215,90 @@
                                 <span class="left">0</span>
                                 <span class="right">left</span>
                             </p>
-                            <button class="btn-pledge btn-pledge__disabled">Out Of Stock</button>
+                            <button class="btn-pledge btn-pledge__disabled">
+                                Out Of Stock
+                            </button>
                         </div>
                     </article>
                 </section>
             </main>
+
+            <div class="modal modal__pledge">
+                <div class="modal-container">
+                    <nav class="modal-nav">
+                        <h2 class="caption">Back this project</h2>
+
+                        <button id="closeModal" class="modal-nav__close">
+                            <svg
+                                width="15"
+                                height="15"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
+                                    fill="#000"
+                                    fill-rule="evenodd"
+                                    opacity=".4"
+                                />
+                            </svg>
+                        </button>
+                    </nav>
+
+                    <p class="text">
+                        Want to support us in bringing Mastercraft Bamboo
+                        Monitor Riser out in the world?
+                    </p>
+
+                    <article class="modal-pledge">
+                        <div class="wrapper">
+                            <input
+                                type="radio"
+                                name="pledge"
+                                id="noPledge"
+                                value="false"
+                            />
+                            <h3 class="caption__pledge">
+                                Pledge with no reward
+                            </h3>
+                        </div>
+                        <p class="text">
+                            Choose to support us without a reward if you simply
+                            believe in our project. As a backer, you will be
+                            signed up to receive product updates via email.
+                        </p>
+                    </article>
+
+                    <article class="modal-pledge">
+                        <div class="wrapper">
+                            <input
+                                type="radio"
+                                name="pledge"
+                                id="noPledge"
+                                value="false"
+                            />
+                            <h3 class="caption__pledge">
+                                Bamboo Stand
+                                <p>Pledge $25 or more</p>
+                            </h3>
+                        </div>
+                        <p class="text">
+                            You get an ergonomic stand made of natural bamboo.
+                            You've helped us launch our promotional campaign,
+                            and you’ll be added to a special Backer member list.
+                        </p>
+
+                        <p class="pledge-wrapper">
+                            <span class="left">64</span>
+                            <span class="right">left</span>
+                        </p>
+                    </article>
+                </div>
+            </div>
         </div>
         <template>
             <!-- Selection modal start -->
 
-            Back this project Want to support us in bringing Mastercraft Bamboo
-            Monitor Riser out in the world? Pledge with no reward Choose to
-            support us without a reward if you simply believe in our project. As
-            a backer, you will be signed up to receive product updates via
-            email. Bamboo Stand Pledge $25 or more You get an ergonomic stand
-            made of natural bamboo. You've helped us launch our promotional
-            campaign, and you’ll be added to a special Backer member list. 101
-            left
+            101 left
 
             <!-- Selected pledge start -->
             Enter your pledge $25 Continue
