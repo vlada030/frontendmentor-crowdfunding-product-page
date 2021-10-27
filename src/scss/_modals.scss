@@ -1,227 +1,397 @@
-.modal {
+.modal-pledge {
     position: absolute;
     top: 0;
     left: 0;
     height: auto;
     width: 100%;
+    //overflow-y: scroll;
 
     background-color: rgba($colorDark, 0.5);
 
-    &__pledge {
-        padding: 121px 24px 120px;
+    padding: 121px 24px 120px;
 
-        .modal-container {
-            background-color: $colorWhiteLight;
-            border-radius: 8px;
-            padding: 32px 24px 31px;
+    z-index: 30;
 
-            & > p {
-                margin-bottom: 24px;
+    @include media(laptop) {
+        padding: 184px 0;
+    }
+
+    .modal-container {
+        background-color: $colorWhiteLight;
+        border-radius: 8px;
+        padding: 32px 24px 31px;
+
+        @include media(laptop) {
+            width: 730px;
+            padding: 48.5px 48px;
+            margin: 0 auto;
+        }
+
+        & > p {
+            margin-bottom: 24px;
+        }
+    }
+
+    .modal-nav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        margin-bottom: 24px;
+
+        @include media(laptop) {
+            height: 45px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: $colorDark;
+            font-weight: $fontWeightBolder;
+            line-height: 22px;
+
+            @include media(laptop) {
+                font-size: 24px;
+                line-height: 29px;
+                align-self: flex-end;
             }
         }
 
-        .modal-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        &__close {
+            display: grid;
+            place-items: center;
 
-            margin-bottom: 24px;
+            background-color: transparent;
 
-            &__close {
-                display: grid;
-                place-items: center;
+            svg {
+                width: 14px;
+            }
+        }
+    }
 
-                background-color: transparent;
+    .text {
+        line-height: 30px;
+        margin-bottom: 32px;
+    }
 
-                h2 {
-                    @extend .caption;
-                    font-weight: $fontWeightBolder;
-                }
+    .pledge-option {
+        border: 1px solid rgba($colorDark, 0.15);
+        border-radius: 8px;
+        margin-bottom: 24px;
 
-                svg {
-                    width: 14px;
-                }
+        @include media(laptop) {
+        }
+
+        &__wrapper {
+            padding: 24px 24px 32px;
+
+            @include media(laptop) {
+                padding: 33px 28px 32px;
             }
         }
 
-        .pledge-option {
-            border: 1px solid rgba($colorDark, 0.15);
-            border-radius: 8px;
+        &__submit-wrapper {
+            border-top: 1px solid rgba($colorDark, 0.15);
+            padding: 24px;
+
+            //display: none;
+        }
+
+        .header-wrapper {
             margin-bottom: 24px;
 
-            &__wrapper {
-                padding: 24px 24px 32px;
-            }
-
-            &__submit-wrapper {
-                border-top: 1px solid rgba($colorDark, 0.15);
-                padding: 24px;
-
+            .header-stats {
                 display: none;
             }
 
-            .header-wrapper {
-                margin-bottom: 24px;
+            @include media(tablet) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
 
-                .radio-wrapper {
+                .header-stats {
                     display: block;
-                    cursor: pointer;
-                    user-select: none;
-
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-
-                    position: relative;
-
-                    input {
-                        position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                        height: 0;
-                        width: 0;
-                    }
-
-                    .checkmark {
-                        // position: absolute;
-                        // top: 0;
-                        // left: 0;
-                        position: relative;
-                        height: 24px;
-                        width: 24px;
-                        margin-right: 16px;
-
-                        border: 1px solid rgba($colorDark, 0.15);
-                        border-radius: 50%;
-
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            top: 5px;
-                            left: 5px;
-                            width: 12px;
-                            height: 12px;
-                            border-radius: 50%;
-                            background: $colorPirimaryLight;
-                            display: none;
-                        }
-                    }
-
-                    .fixed-height {
-                        height: 42px;
-                        display: grid;
-                        align-items: center;
-                        justify-content: center;
-                    }
-
-                    .mb {
-                        margin-bottom: 8px;
-                    }
-
-                    input:checked ~ .checkmark::after {
-                        display: block;
-                    }
-                }
-
-                h3 {
-                    //height: 42px;
-                    margin-left: 40px;
+                    margin: 0;
                 }
             }
 
-            .stats-wrapper {
-                margin-top: 24px;
+            @include media(laptop) {
+                margin-bottom: 10px;
+            }
+
+            .radio-wrapper {
+                display: block;
+                cursor: pointer;
+                user-select: none;
 
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
 
-                .left {
-                    font-size: 18px;
-                    color: $colorDark;
-                    line-height: 22px;
-                    font-weight: $fontWeightBolder;
+                position: relative;
+
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+
+                .checkmark {
+                    // position: absolute;
+                    // top: 0;
+                    // left: 0;
+                    position: relative;
+                    height: 24px;
+                    width: 24px;
+                    margin-right: 16px;
+
+                    border: 1px solid rgba($colorDark, 0.15);
+                    border-radius: 50%;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: $colorPirimaryLight;
+                        display: none;
+                    }
+
+                    @include media(laptop) {
+                        margin-top: 12px;
+                        margin-right: 24px;
+                    }
+                }
+
+                .fixed-height {
+                    height: 42px;
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include media(laptop) {
+
+                        display: flex;
+                        flex-direction: row;
+                    } 
+
+                    .radio-label {
+                        font-size: 14px;
+                        color: $colorDark;
+                        font-weight: $fontWeightBolder;
+                        line-height: 17px;
+
+                        &--green {
+                            color: $colorPirimaryLight;
+                            font-weight: $fontWeightBold;
+                        }
+
+                        @include media(laptop) {
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+
+                .mb {
+                    margin-bottom: 8px;
+
+                    @include media(laptop) {
+                        margin: 0;
+                        margin-right: 16px;
+                    }
+                }
+
+                input:checked ~ .checkmark::after {
+                    display: block;
+                }
+            }
+
+        }
+
+        .pledge-text {
+            font-size: 14px;
+            color: $colorDarkLight;
+            font-weight: $fontWeightNormal;
+            line-height: 24px;
+
+            margin-left: 46px;
+
+            @include media(laptop) {
+                font-size: 15px;
+                line-height: 28px;
+
+            }
+        }
+
+        .stats-wrapper {
+            margin-top: 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            @include media(tablet) {
+                display: none;
+            }
+
+            .left {
+                font-size: 18px;
+                color: $colorDark;
+                line-height: 22px;
+                font-weight: $fontWeightBolder;
+                margin-right: 8px;
+            }
+
+            .right {
+                font-size: 15px;
+                color: $colorDarkLight;
+                font-weight: $fontWeightNormal;
+                line-height: 18px;
+            }
+        }
+
+        .pledge-form {
+            & > h4 {
+                @extend .text;
+                line-height: 27px;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+
+            .form-control-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    @extend .btn-pledge;
+                    padding: 15px 25px 16px 26px;
+                }
+            }
+
+            .form-control {
+                border: 1px solid rgba($colorDark, 0.15);
+                border-radius: 33.5px;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                font-size: 14px;
+                line-height: 17px;
+                font-weight: $fontWeightBolder;
+                color: $colorDark;
+
+                padding: 15px 24px 15px;
+                margin-right: 16px;
+
+                label {
+                    opacity: 0.25;
                     margin-right: 8px;
                 }
 
-                .right {
-                    font-size: 15px;
-                    color: $colorDarkLight;
-                    font-weight: $fontWeightNormal;
-                    line-height: 18px;
-                }
-            }
+                input {
+                    font-size: inherit;
+                    color: inherit;
+                    line-height: inherit;
+                    font-weight: inherit;
+                    border: 0;
+                    width: 35px;
 
-            .pledge-form {
-
-                & > h4 {
-                    @extend .text;
-                    line-height: 27px;
-                    text-align: center;
-                    margin-bottom: 16px;
-                }
-
-                .form-control-container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-
-                    button {
-                        @extend .btn-pledge;
-                        padding: 15px 25px 16px 26px;
+                    /* Firefox */
+                    -moz-appearance: textfield;
+                    /* Chrome, Safari, Edge, Opera */
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
                     }
 
-                }
-
-                .form-control {
-                    border: 1px solid rgba($colorDark, 0.15);  
-                    border-radius: 33.5px;   
-                    
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    
-                    font-size: 14px;
-                    line-height: 17px;
-                    font-weight: $fontWeightBolder;
-                    color: $colorDark;
-                    
-                    padding: 15px 24px 15px;
-
-                    label {
-                        opacity: 0.25;
-                        margin-right: 8px;
+                    &:focus {
+                        outline: 0;
                     }
 
-                    input {
-                        font-size: inherit;
-                        color: inherit;
-                        line-height: inherit;
-                        font-weight: inherit;
-                        border: 0;
-                        width: 35px;
-
-                        /* Firefox */
-                        -moz-appearance: textfield;
-                        /* Chrome, Safari, Edge, Opera */
-                        &::-webkit-outer-spin-button,
-                        &::-webkit-inner-spin-button {
-                            -webkit-appearance: none;
-                            margin: 0;
-                        }
-
-                        &:focus {
-                            outline: 0;
-                        }
-
-                        &:disabled {
-                            background-color: inherit;
-                        }
-
-
+                    &:disabled {
+                        background-color: inherit;
                     }
                 }
             }
+        }
+    }
+}
+
+.modal-confirmation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba($colorDark, 0.5);
+    background-attachment: local;
+
+    display: grid;
+    place-items: center;
+
+    z-index: 40;
+
+    .modal-wrapper {
+        width: 327px;
+        background-color: $colorWhiteLight;
+        border-radius: 8px;
+
+        text-align: center;
+
+        padding: 32px 24px 40px;
+        margin-bottom: 0 auto;
+
+        @include media(laptop) {
+            width: 540px;
+            padding: 48px;
+        }
+
+        .img-check {
+            height: 64px;
+            margin-bottom: 24px;
+
+            @include media(laptop) {
+                height: 90px;
+                margin-bottom: 48px;
+            }
+        }
+
+        h2 {
+            font-size: 18px;
+            color: $colorDark;
+            font-weight: $fontWeightBolder;
+            line-height: 21px;
+
+            margin-bottom: 24px;
+
+            @include media(laptop) {
+                font-size: 24px;
+                line-height: 27px;
+
+                margin-bottom: 16px;
+            }
+        }
+
+        .text {
+            margin-bottom: 32px;
+
+            @include media(laptop) {
+                line-height: 30px;
+            }
+        }
+
+        button {
+            @extend .btn-pledge;
         }
     }
 }
