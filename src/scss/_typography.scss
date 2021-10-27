@@ -1,5 +1,5 @@
 .open-modal {
-    transform: translateX(0) !important;
+    transform: translateY(0) !important;
     opacity: 1 !important;
 }
 
@@ -31,7 +31,7 @@
     line-height: 17px;
 
     &--green {
-        color: $colorPirimaryLight;
+        color: $colorPrimaryLight;
         font-weight: $fontWeightBold;
     }
 
@@ -70,7 +70,7 @@
     transition: $transition;
 
     &--green {
-        background-color: $colorPirimaryLight;
+        background-color: $colorPrimaryLight;
         color: $colorWhiteLight;
 
         &:hover {
@@ -87,7 +87,7 @@
     border-radius: 33.5px;
     letter-spacing: 0.4px;
 
-    background-color: $colorPirimaryLight;
+    background-color: $colorPrimaryLight;
     cursor: pointer;
 
     padding: 15px 33px 16px 32px;

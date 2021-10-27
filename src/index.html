@@ -78,7 +78,7 @@
                         and eye strain.
                     </p>
                     <div class="wrapper">
-                        <button class="btn btn--green">
+                        <button id="openPledgeModal" class="btn btn--green">
                             Back this project
                         </button>
 
@@ -168,7 +168,7 @@
                                 <span class="left">101</span>
                                 <span class="right">left</span>
                             </p>
-                            <button class="btn-pledge">Select Reward</button>
+                            <button  id="openModalPledge-25" class="btn-pledge">Select Reward</button>
                         </div>
                     </article>
 
@@ -190,7 +190,7 @@
                                 <span class="left">64</span>
                                 <span class="right">left</span>
                             </p>
-                            <button class="btn-pledge">Select Reward</button>
+                            <button id="openModalPledge-75"class="btn-pledge">Select Reward</button>
                         </div>
                     </article>
 
@@ -215,7 +215,7 @@
                                 <span class="left">0</span>
                                 <span class="right">left</span>
                             </p>
-                            <button class="btn-pledge btn-pledge__disabled">
+                            <button id="openModalPledge-200" class="btn-pledge btn-pledge__disabled">
                                 Out Of Stock
                             </button>
                         </div>
@@ -230,7 +230,7 @@
                 <nav class="modal-nav">
                     <h2>Back this project</h2>
 
-                    <button id="closeModal" class="modal-nav__close">
+                    <button id="closePledgeModal" class="modal-nav__close">
                         <svg
                             width="15"
                             height="15"
@@ -246,7 +246,7 @@
                     </button>
                 </nav>
 
-                <p class="text">
+                <p class="modal-text">
                     Want to support us in bringing Mastercraft Bamboo
                     Monitor Riser out in the world?
                 </p>
@@ -279,7 +279,7 @@
                     </div>
 
                     <div class="pledge-option__submit-wrapper">
-                        <form action="#" class="pledge-form">
+                        <form action="#" class="pledge-form" data-form>
                             <h4>Enter your pledge</h4>
 
                             <div class="form-control-container">
@@ -309,7 +309,7 @@
                                 <input
                                     type="radio"
                                     name="pledge"
-                                    id="pledge-25"
+                                    id="pledgeSelector25"
                                 />
 
                                 <span class="checkmark"></span>
@@ -346,17 +346,17 @@
                         </p>
                     </div>
 
-                    <div class="pledge-option__submit-wrapper">
-                        <form action="#" class="pledge-form">
+                    <div class="pledge-option__submit-wrapper disabled">
+                        <form action="#" class="pledge-form"  data-form>
                             <h4>Enter your pledge</h4>
 
                             <div class="form-control-container">
                                 <div class="form-control">
-                                    <label for="pledgeAmount">$</label>
+                                    <label for="pledgeInput25">$</label>
                                     <input
                                         class=""
                                         type="number"
-                                        id="pledgeAmount"
+                                        id="pledgeInput25"
                                         placeholder="0"
                                         min="25"
                                     />
@@ -377,7 +377,7 @@
                                 <input
                                     type="radio"
                                     name="pledge"
-                                    id="pledge-75"
+                                    id="pledgeSelector75"
                                 />
 
                                 <span class="checkmark"></span>
@@ -413,17 +413,17 @@
                         </p>
                     </div>
 
-                    <div class="pledge-option__submit-wrapper">
-                        <form action="#" class="pledge-form">
+                    <div class="pledge-option__submit-wrapper disabled">
+                        <form action="#" class="pledge-form"  data-form>
                             <h4>Enter your pledge</h4>
 
                             <div class="form-control-container">
                                 <div class="form-control">
-                                    <label for="pledgeAmount">$</label>
+                                    <label for="pledgeInput75">$</label>
                                     <input
                                         class=""
                                         type="number"
-                                        id="pledgeAmount"
+                                        id="pledgeInput75"
                                         placeholder="0"
                                         min="75"
                                     />
@@ -444,7 +444,7 @@
                                 <input
                                     type="radio"
                                     name="pledge"
-                                    id="pledge-200"
+                                    id="pledgeSelector200"
                                 />
 
                                 <span class="checkmark"></span>
@@ -481,17 +481,17 @@
                         </p>
                     </div>
 
-                    <div class="pledge-option__submit-wrapper">
-                        <form action="#" class="pledge-form">
+                    <div class="pledge-option__submit-wrapper disabled">
+                        <form action="#" class="pledge-form"  data-form>
                             <h4>Enter your pledge</h4>
 
                             <div class="form-control-container">
                                 <div class="form-control">
-                                    <label for="pledgeAmount">$</label>
+                                    <label for="pledgeInput200">$</label>
                                     <input
                                         class=""
                                         type="number"
-                                        id="pledgeAmount"
+                                        id="pledgeInput200"
                                         placeholder="0"
                                         min="200"
                                     />
@@ -507,7 +507,7 @@
             </div>
         </div>
 
-        <div class="modal-confirmation disabled">
+        <div class="modal-confirmation">
             <div class="modal-wrapper">
                 <img
                     class="img-check"
@@ -520,7 +520,7 @@
                     Mastercraft Bamboo Monitor Riser worldwide. You will get
                     an email once our campaign is completed.
                 </p>
-                <button id="btnConfirmed">Got it!</button>
+                <button id="closeConfirmedModal">Got it!</button>
             </div>
         </div>
     </body>

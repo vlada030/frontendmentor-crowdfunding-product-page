@@ -9,6 +9,9 @@
     background-color: rgba($colorDark, 0.5);
 
     padding: 121px 24px 120px;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: $transition;
 
     z-index: 30;
 
@@ -23,13 +26,10 @@
 
         @include media(laptop) {
             width: 730px;
-            padding: 48.5px 48px;
+            padding: 48.5px 47px;
             margin: 0 auto;
         }
 
-        & > p {
-            margin-bottom: 24px;
-        }
     }
 
     .modal-nav {
@@ -60,18 +60,44 @@
         &__close {
             display: grid;
             place-items: center;
+            width: 28px;
+            height: 28px;
 
             background-color: transparent;
+            cursor: pointer;
 
             svg {
                 width: 14px;
+
+                path {
+                    transition: $transition;
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
 
-    .text {
-        line-height: 30px;
-        margin-bottom: 32px;
+    .modal-text {
+        font-size: 14px;
+        color: $colorDarkLight;
+        font-weight: $fontWeightNormal;
+        line-height: 24px;
+
+        margin-bottom: 24px;
+
+        @include media(laptop) {
+            font-size: 16px;
+            line-height: 30px;
+            margin-bottom: 32px;
+        }
     }
 
     .pledge-option {
@@ -92,7 +118,7 @@
 
         &__submit-wrapper {
             border-top: 1px solid rgba($colorDark, 0.15);
-            padding: 24px;
+            padding: 24px 28px;
 
             //display: none;
         }
@@ -116,7 +142,7 @@
             }
 
             @include media(laptop) {
-                margin-bottom: 10px;
+                margin-bottom: 0;
             }
 
             .radio-wrapper {
@@ -129,6 +155,7 @@
                 justify-content: flex-start;
 
                 position: relative;
+                
 
                 input {
                     position: absolute;
@@ -158,7 +185,7 @@
                         width: 12px;
                         height: 12px;
                         border-radius: 50%;
-                        background: $colorPirimaryLight;
+                        background: $colorPrimaryLight;
                         display: none;
                     }
 
@@ -178,6 +205,7 @@
 
                         display: flex;
                         flex-direction: row;
+                        height: 26px;
                     } 
 
                     .radio-label {
@@ -186,8 +214,10 @@
                         font-weight: $fontWeightBolder;
                         line-height: 17px;
 
+                        transition: $transition;
+
                         &--green {
-                            color: $colorPirimaryLight;
+                            color: $colorPrimaryLight;
                             font-weight: $fontWeightBold;
                         }
 
@@ -210,6 +240,12 @@
                 input:checked ~ .checkmark::after {
                     display: block;
                 }
+
+            }
+
+            .radio-wrapper:hover .radio-label {
+                color: $colorPrimaryLight;
+                font-weight: $fontWeightBolder;
             }
 
         }
@@ -257,11 +293,29 @@
         }
 
         .pledge-form {
+
+            @include media(laptop) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+
             & > h4 {
-                @extend .text;
+                font-size: 14px;
+                color: $colorDarkLight;
+                font-weight: $fontWeightNormal;
                 line-height: 27px;
+
                 text-align: center;
                 margin-bottom: 16px;
+
+                @include media(laptop) {
+                    font-size: 15px;
+                    line-height: 28px;
+                    margin-bottom: 0;
+                }
             }
 
             .form-control-container {
@@ -272,6 +326,11 @@
                 button {
                     @extend .btn-pledge;
                     padding: 15px 25px 16px 26px;
+                    
+                    @include media(laptop) {
+                        padding: 15px 23px 16px 24px;
+                        letter-spacing: 0.1px;
+                    }
                 }
             }
 
@@ -288,7 +347,7 @@
                 font-weight: $fontWeightBolder;
                 color: $colorDark;
 
-                padding: 15px 24px 15px;
+                padding: 14px 24px;
                 margin-right: 16px;
 
                 label {
@@ -338,6 +397,10 @@
 
     display: grid;
     place-items: center;
+
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: $transition;
 
     z-index: 40;
 
