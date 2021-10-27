@@ -2,13 +2,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: auto;
     width: 100%;
 
     background-color: rgba($colorDark, 0.5);
-
-    // display: grid;
-    // place-items: center;
 
     &__pledge {
         padding: 121px 24px 120px;
@@ -50,15 +47,20 @@
         .pledge-option {
             border: 1px solid rgba($colorDark, 0.15);
             border-radius: 8px;
-
-            padding: 24px;
             margin-bottom: 24px;
 
-            & > .wrapper {
-                // display: flex;
-                // align-items: center;
-                // justify-content: flex-start;
+            &__wrapper {
+                padding: 24px 24px 32px;
+            }
 
+            &__submit-wrapper {
+                border-top: 1px solid rgba($colorDark, 0.15);
+                padding: 24px;
+
+                display: none;
+            }
+
+            .header-wrapper {
                 margin-bottom: 24px;
 
                 .radio-wrapper {
@@ -103,7 +105,6 @@
                             background: $colorPirimaryLight;
                             display: none;
                         }
-
                     }
 
                     .fixed-height {
@@ -128,8 +129,98 @@
                 }
             }
 
-            p.text {
-                margin-bottom: 8px;
+            .stats-wrapper {
+                margin-top: 24px;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                .left {
+                    font-size: 18px;
+                    color: $colorDark;
+                    line-height: 22px;
+                    font-weight: $fontWeightBolder;
+                    margin-right: 8px;
+                }
+
+                .right {
+                    font-size: 15px;
+                    color: $colorDarkLight;
+                    font-weight: $fontWeightNormal;
+                    line-height: 18px;
+                }
+            }
+
+            .pledge-form {
+
+                & > h4 {
+                    @extend .text;
+                    line-height: 27px;
+                    text-align: center;
+                    margin-bottom: 16px;
+                }
+
+                .form-control-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    button {
+                        @extend .btn-pledge;
+                        padding: 15px 25px 16px 26px;
+                    }
+
+                }
+
+                .form-control {
+                    border: 1px solid rgba($colorDark, 0.15);  
+                    border-radius: 33.5px;   
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    
+                    font-size: 14px;
+                    line-height: 17px;
+                    font-weight: $fontWeightBolder;
+                    color: $colorDark;
+                    
+                    padding: 15px 24px 15px;
+
+                    label {
+                        opacity: 0.25;
+                        margin-right: 8px;
+                    }
+
+                    input {
+                        font-size: inherit;
+                        color: inherit;
+                        line-height: inherit;
+                        font-weight: inherit;
+                        border: 0;
+                        width: 35px;
+
+                        /* Firefox */
+                        -moz-appearance: textfield;
+                        /* Chrome, Safari, Edge, Opera */
+                        &::-webkit-outer-spin-button,
+                        &::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+
+                        &:focus {
+                            outline: 0;
+                        }
+
+                        &:disabled {
+                            background-color: inherit;
+                        }
+
+
+                    }
+                }
             }
         }
     }

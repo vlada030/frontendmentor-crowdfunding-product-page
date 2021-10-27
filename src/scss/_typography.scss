@@ -119,28 +119,3 @@
         z-index: 1;
     }
 }
-
-.pledge-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    &.text {
-        margin-bottom: 8px;
-    }
-
-    .left {
-        font-size: 32px;
-        color: $colorDark;
-        line-height: 39px;
-        font-weight: $fontWeightBolder;
-        margin-right: 8px;
-    }
-
-    .right {
-        font-size: 15px;
-        color: $colorDarkLight;
-        font-weight: $fontWeightNormal;
-        line-height: 18px;
-    }
-}

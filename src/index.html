@@ -222,12 +222,12 @@
                     </article>
                 </section>
             </main>
-
+            
             <div class="modal modal__pledge">
                 <div class="modal-container">
                     <nav class="modal-nav">
                         <h2>Back this project</h2>
-
+    
                         <button id="closeModal" class="modal-nav__close">
                             <svg
                                 width="15"
@@ -243,88 +243,258 @@
                             </svg>
                         </button>
                     </nav>
-
+    
                     <p class="text">
                         Want to support us in bringing Mastercraft Bamboo
                         Monitor Riser out in the world?
                     </p>
-
+    
                     <article class="pledge-option">
-                        <div class="wrapper">
-                            <label class="radio-wrapper">
-                                
-                                <input
-                                type="radio"
-                                name="pledge"
-                                id="noPledge"
-                                />
-                                <span class="checkmark"></span>
-
-                                <div class="fixed-height">
-                                    <p class="caption__pledge">Pledge with no reward</p>
-                                </div>
-                            </label>
+                        <div class="pledge-option__wrapper">
+                            <div class="header-wrapper">
+                                <label class="radio-wrapper">
+                                    <input
+                                        type="radio"
+                                        name="pledge"
+                                        id="noPledge"
+                                    />
+                                    <span class="checkmark"></span>
+    
+                                    <div class="fixed-height">
+                                        <p class="caption__pledge">
+                                            Pledge with no reward
+                                        </p>
+                                    </div>
+                                </label>
+                            </div>
+    
+                            <p class="text">
+                                Choose to support us without a reward if you
+                                simply believe in our project. As a backer, you
+                                will be signed up to receive product updates via
+                                email.
+                            </p>
                         </div>
-
-                        <p class="text">
-                            Choose to support us without a reward if you simply
-                            believe in our project. As a backer, you will be
-                            signed up to receive product updates via email.
-                        </p>
+    
+                        <div class="pledge-option__submit-wrapper">
+                            <form action="#" class="pledge-form">
+                                <h4>Enter your pledge</h4>
+    
+                                <div class="form-control-container">
+                                    <div class="form-control">
+                                        <label for="pledgeAmount">$</label>
+                                        <input
+                                            class=""
+                                            type="number"
+                                            id="pledgeAmount"
+                                            placeholder="0"
+                                            disabled="disabled"
+                                        />
+                                    </div>
+    
+                                    <button id="submitBtn" type="submit">
+                                        Continue
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </article>
-
+    
                     <article class="pledge-option">
-                        <div class="wrapper">
-                            <label class="radio-wrapper">
-                                
-                                <input
-                                type="radio"
-                                name="pledge"
-                                id="pledge-25"
-                                />
-
-                                <span class="checkmark"></span>
-                                <div class="fixed-height">
-                                    <p class="caption__pledge mb">Bamboo Stand</p>
-                                    <p class="caption__pledge caption__pledge--green">Pledge $25 or more</p>
-                                </div>
-                            </label>
+                        <div class="pledge-option__wrapper">
+                            <div class="header-wrapper">
+                                <label class="radio-wrapper">
+                                    <input
+                                        type="radio"
+                                        name="pledge"
+                                        id="pledge-25"
+                                    />
+    
+                                    <span class="checkmark"></span>
+                                    <div class="fixed-height">
+                                        <p class="caption__pledge mb">
+                                            Bamboo Stand
+                                        </p>
+                                        <p
+                                            class="
+                                                caption__pledge
+                                                caption__pledge--green
+                                            "
+                                        >
+                                            Pledge $25 or more
+                                        </p>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="text">
+                                You get an ergonomic stand made of natural
+                                bamboo. You've helped us launch our promotional
+                                campaign, and you’ll be added to a special
+                                Backer member list.
+                            </p>
+    
+                            <p class="stats-wrapper">
+                                <span class="left">101</span>
+                                <span class="right">left</span>
+                            </p>
                         </div>
-                        <p class="text">
-                            You get an ergonomic stand made of natural bamboo.
-                            You've helped us launch our promotional campaign,
-                            and you’ll be added to a special Backer member list.
-                        </p>
-
-                        <p class="pledge-wrapper">
-                            <span class="left">64</span>
-                            <span class="right">left</span>
-                        </p>
+    
+                        <div class="pledge-option__submit-wrapper">
+                            <form action="#" class="pledge-form">
+                                <h4>Enter your pledge</h4>
+    
+                                <div class="form-control-container">
+                                    <div class="form-control">
+                                        <label for="pledgeAmount">$</label>
+                                        <input
+                                            class=""
+                                            type="number"
+                                            id="pledgeAmount"
+                                            placeholder="0"
+                                            min=25
+                                        />
+                                    </div>
+    
+                                    <button id="submitBtn" type="submit">
+                                        Continue
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+    
+                    <article class="pledge-option">
+                        <div class="pledge-option__wrapper">
+                            <div class="header-wrapper">
+                                <label class="radio-wrapper">
+                                    <input
+                                        type="radio"
+                                        name="pledge"
+                                        id="pledge-75"
+                                    />
+    
+                                    <span class="checkmark"></span>
+                                    <div class="fixed-height">
+                                        <p class="caption__pledge mb">
+                                            Black Edition Stand
+                                        </p>
+                                        <p
+                                            class="
+                                                caption__pledge
+                                                caption__pledge--green
+                                            "
+                                        >
+                                            Pledge $75 or more
+                                        </p>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="text">
+                                You get a Black Special Edition computer stand
+                                and a personal thank you. You’ll be added to our
+                                Backer member list. Shipping is included.
+                            </p>
+    
+                            <p class="stats-wrapper">
+                                <span class="left">64</span>
+                                <span class="right">left</span>
+                            </p>
+                        </div>
+    
+                        <div class="pledge-option__submit-wrapper">
+                            <form action="#" class="pledge-form">
+                                <h4>Enter your pledge</h4>
+    
+                                <div class="form-control-container">
+                                    <div class="form-control">
+                                        <label for="pledgeAmount">$</label>
+                                        <input
+                                            class=""
+                                            type="number"
+                                            id="pledgeAmount"
+                                            placeholder="0"
+                                            min=75
+                                        />
+                                    </div>
+    
+                                    <button id="submitBtn" type="submit">
+                                        Continue
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+    
+                    <article class="pledge-option overlay">
+                        <div class="pledge-option__wrapper">
+                            <div class="header-wrapper">
+                                <label class="radio-wrapper">
+                                    <input
+                                        type="radio"
+                                        name="pledge"
+                                        id="pledge-200"
+                                    />
+    
+                                    <span class="checkmark"></span>
+                                    <div class="fixed-height">
+                                        <p class="caption__pledge mb">
+                                            Mahogany Special Edition
+                                        </p>
+                                        <p
+                                            class="
+                                                caption__pledge
+                                                caption__pledge--green
+                                            "
+                                        >
+                                        Pledge $200 or more
+                                        </p>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="text">
+                                You get two Special
+            Edition Mahogany stands, a Backer T-Shirt, and a personal thank you.
+            You’ll be added to our Backer member list. Shipping is included.
+                            </p>
+    
+                            <p class="stats-wrapper">
+                                <span class="left">0</span>
+                                <span class="right">left</span>
+                            </p>
+                        </div>
+    
+                        <div class="pledge-option__submit-wrapper">
+                            <form action="#" class="pledge-form">
+                                <h4>Enter your pledge</h4>
+    
+                                <div class="form-control-container">
+                                    <div class="form-control">
+                                        <label for="pledgeAmount">$</label>
+                                        <input
+                                            class=""
+                                            type="number"
+                                            id="pledgeAmount"
+                                            placeholder="0"
+                                            min=200
+                                        />
+                                    </div>
+    
+                                    <button id="submitBtn" type="submit">
+                                        Continue
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </article>
                 </div>
             </div>
+
+            <div class="modal modal--confirmation"></div>
         </div>
         <template>
-            <!-- Selection modal start -->
+            
 
-            101 left
-
-            <!-- Selected pledge start -->
-            Enter your pledge $25 Continue
-            <!-- Selected pledge end -->
-
-            Black Edition Stand Pledge $75 or more You get a Black Special
-            Edition computer stand and a personal thank you. You’ll be added to
-            our Backer member list. Shipping is included. 64 left
-
-            <!-- Selected pledge start -->
-            Enter your pledge $75 Continue
-            <!-- Selected pledge end -->
-
-            Mahogany Special Edition Pledge $200 or more You get two Special
-            Edition Mahogany stands, a Backer T-Shirt, and a personal thank you.
-            You’ll be added to our Backer member list. Shipping is included. 0
-            left
+             
 
             <!-- Selected pledge  start -->
             Enter your pledge $200 Continue
