@@ -30,12 +30,18 @@ export const updateModalPledgeUI = (clickedElement) => {
 };
 
 export const resetModalPledgeUI = () => {
-
+    // remove active class & checked all to false
     pledgeOptionList.forEach(item => {
         const radioInput = item.querySelector('[type="radio"]')
         radioInput.checked = false
         item.classList.toggle('active', false)
     })
+
+    // set inputs to start values
+    pledgeInput25.value = 25
+    pledgeInput75.value = 75
+    pledgeInput200.value = 200
+
 }
 
 export const removePledgeActiveClass = () => {

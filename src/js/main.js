@@ -19,10 +19,14 @@ import Stats from "./statistics";
 import {
     updateModalPledgeUI,
     resetModalPledgeUI,
-    removePledgeActiveClass
+    removePledgeActiveClass,
 } from "./helper";
 
-// number calculation
+// initial calculation
+// const statistics = new Stats(89914, 100000, 5007)
+const statistics = new Stats(50000, 100000, 5000, 101, 64, 0);
+statistics.calcAmount();
+statistics.updateUI();
 
 window.addEventListener("click", (e) => {
     // open / close mobile menu
@@ -62,11 +66,19 @@ window.addEventListener("click", (e) => {
     ) {
         modalPledge.classList.toggle("open-modal");
         updateModalPledgeUI(e.target);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
     }
 
     // close Confirmation Dialog
     if (e.target.closest("#closeConfirmedModal")) {
         modalConfirmation.classList.toggle("open-modal", false);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
     }
 });
 
@@ -74,6 +86,30 @@ window.addEventListener("click", (e) => {
 formList.forEach((form) => {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
+        const inputElem = form.querySelector('input[type="number"]');
+        const inputValue = inputElem.value;
+        const selectorValue = inputElem.placeholder;
+
+        statistics.calcAmount(inputValue);
+        statistics.calcTotalBackers();
+
+        switch (selectorValue) {
+            case '0': 
+                break
+            case "25":
+                statistics.calcLeftNoBackers25();
+                break;
+            case "75":
+                statistics.calcLeftNoBackers75();
+                break;
+            case "200":
+                statistics.calcLeftNoBackers200();
+                break;
+            default:
+                return;
+        }
+
+        statistics.updateUI();
         modalPledge.classList.toggle("open-modal", false);
         modalConfirmation.classList.toggle("open-modal", true);
     });

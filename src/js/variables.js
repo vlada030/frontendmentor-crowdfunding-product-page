@@ -20,3 +20,12 @@ export const btnBookmark = document.getElementById("btnBookmark");
 
 export const radioBtnList = document.querySelectorAll('[type="radio"]')
 export const pledgeOptionList = document.querySelectorAll('.pledge-option')
+
+export const progressBar = document.getElementById('progressBar')
+export const currentAmountField = document.getElementById('currentAmount')
+export const totalAmountField = document.getElementById('totalAmount')
+export const totalBackersField = document.getElementById('totalBackers')
+
+export const field25List = document.querySelectorAll('[data-field25]')
+export const field75List = document.querySelectorAll('[data-field75]')
+export const field200List = document.querySelectorAll('[data-field200]')

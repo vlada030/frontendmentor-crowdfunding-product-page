@@ -109,14 +109,14 @@
                     <div class="list">
                         <div class="item">
                             <div class="wrapper">
-                                <h3>$89,914</h3>
-                                <p>of $100,000 backed</p>
+                                <h3 id="currentAmount">$89,914</h3>
+                                <p id="totalAmount">of $100,000 backed</p>
                             </div>
                             <div class="line"></div>
                         </div>
                         <div class="item">
                             <div class="wrapper">
-                                <h3>5,007</h3>
+                                <h3 id="totalBackers">5,007</h3>
                                 <p>total backers</p>
                             </div>
                             <div class="line"></div>
@@ -165,7 +165,7 @@
 
                         <div class="wrapper wrapper--footer">
                             <p>
-                                <span class="left">101</span>
+                                <span data-field25 class="left"></span>
                                 <span class="right">left</span>
                             </p>
                             <button  id="openModalPledge-25" class="btn-pledge">Select Reward</button>
@@ -187,7 +187,7 @@
 
                         <div class="wrapper wrapper--footer">
                             <p>
-                                <span class="left">64</span>
+                                <span data-field75 class="left"></span>
                                 <span class="right">left</span>
                             </p>
                             <button id="openModalPledge-75"class="btn-pledge">Select Reward</button>
@@ -212,7 +212,7 @@
 
                         <div class="wrapper wrapper--footer">
                             <p>
-                                <span class="left">0</span>
+                                <span data-field200 class="left"></span>
                                 <span class="right">left</span>
                             </p>
                             <button id="openModalPledge-200" class="btn-pledge btn-pledge__disabled">
@@ -223,294 +223,294 @@
                 </section>
             </main>
 
-        </div>
-
-        <div class="modal-pledge">
-            <div class="modal-container">
-                <nav class="modal-nav">
-                    <h2>Back this project</h2>
-
-                    <button id="closePledgeModal" class="modal-nav__close">
-                        <svg
-                            width="15"
-                            height="15"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
-                                fill="#000"
-                                fill-rule="evenodd"
-                                opacity=".4"
-                            />
-                        </svg>
-                    </button>
-                </nav>
-
-                <p class="modal-text">
-                    Want to support us in bringing Mastercraft Bamboo
-                    Monitor Riser out in the world?
-                </p>
-
-                <article class="pledge-option">
-                    <div class="pledge-option__wrapper">
-                        <div class="header-wrapper">
-                            <label class="radio-wrapper">
-                                <input
-                                    type="radio"
-                                    name="pledge"
-                                    id="noPledge"
+            <div class="modal-pledge">
+                <div class="modal-container">
+                    <nav class="modal-nav">
+                        <h2>Back this project</h2>
+    
+                        <button id="closePledgeModal" class="modal-nav__close">
+                            <svg
+                                width="15"
+                                height="15"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
+                                    fill="#000"
+                                    fill-rule="evenodd"
+                                    opacity=".4"
                                 />
-                                <span class="checkmark"></span>
-
-                                <div class="fixed-height">
-                                    <p class="radio-label">
-                                        Pledge with no reward
-                                    </p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <p class="pledge-text">
-                            Choose to support us without a reward if you
-                            simply believe in our project. As a backer, you
-                            will be signed up to receive product updates via
-                            email.
-                        </p>
-                    </div>
-
-                    <div class="pledge-option__submit-wrapper">
-                        <form action="#" class="pledge-form" data-form>
-                            <h4>Enter your pledge</h4>
-
-                            <div class="form-control-container">
-                                <div class="form-control">
-                                    <label for="pledgeAmount">$</label>
+                            </svg>
+                        </button>
+                    </nav>
+    
+                    <p class="modal-text">
+                        Want to support us in bringing Mastercraft Bamboo
+                        Monitor Riser out in the world?
+                    </p>
+    
+                    <article class="pledge-option">
+                        <div class="pledge-option__wrapper">
+                            <div class="header-wrapper">
+                                <label class="radio-wrapper">
                                     <input
-                                        class=""
-                                        type="number"
-                                        id="pledgeAmount"
-                                        placeholder="0"
-                                        disabled="disabled"
-                                        value="0"
+                                        type="radio"
+                                        name="pledge"
+                                        id="noPledge"
                                     />
-                                </div>
-
-                                <button id="submitBtn" type="submit">
-                                    Continue
-                                </button>
+                                    <span class="checkmark"></span>
+    
+                                    <div class="fixed-height">
+                                        <p class="radio-label">
+                                            Pledge with no reward
+                                        </p>
+                                    </div>
+                                </label>
                             </div>
-                        </form>
-                    </div>
-                </article>
-
-                <article class="pledge-option">
-                    <div class="pledge-option__wrapper">
-                        <div class="header-wrapper">
-                            <label class="radio-wrapper">
-                                <input
-                                    type="radio"
-                                    name="pledge"
-                                    id="pledgeSelector25"
-                                />
-
-                                <span class="checkmark"></span>
-                                <div class="fixed-height">
-                                    <p class="radio-label mb">
-                                        Bamboo Stand
-                                    </p>
-                                    <p
-                                        class="
-                                            radio-label
-                                            radio-label--green
-                                        "
-                                    >
-                                        Pledge $25 or more
-                                    </p>
+    
+                            <p class="pledge-text">
+                                Choose to support us without a reward if you
+                                simply believe in our project. As a backer, you
+                                will be signed up to receive product updates via
+                                email.
+                            </p>
+                        </div>
+    
+                        <div class="pledge-option__submit-wrapper">
+                            <form action="#" class="pledge-form" data-form>
+                                <h4>Enter your pledge</h4>
+    
+                                <div class="form-control-container">
+                                    <div class="form-control">
+                                        <label for="pledgeAmount">$</label>
+                                        <input
+                                            class=""
+                                            type="number"
+                                            id="pledgeAmount"
+                                            placeholder="0"
+                                            disabled="disabled"
+                                            value="0"
+                                        />
+                                    </div>
+    
+                                    <button id="submitBtn" type="submit">
+                                        Continue
+                                    </button>
                                 </div>
-                            </label>
-
-                            <p class="stats-wrapper header-stats">
-                                <span class="left">101</span>
+                            </form>
+                        </div>
+                    </article>
+    
+                    <article class="pledge-option">
+                        <div class="pledge-option__wrapper">
+                            <div class="header-wrapper">
+                                <label class="radio-wrapper">
+                                    <input
+                                        type="radio"
+                                        name="pledge"
+                                        id="pledgeSelector25"
+                                    />
+    
+                                    <span class="checkmark"></span>
+                                    <div class="fixed-height">
+                                        <p class="radio-label mb">
+                                            Bamboo Stand
+                                        </p>
+                                        <p
+                                            class="
+                                                radio-label
+                                                radio-label--green
+                                            "
+                                        >
+                                            Pledge $25 or more
+                                        </p>
+                                    </div>
+                                </label>
+    
+                                <p class="stats-wrapper header-stats">
+                                    <span data-field25 class="left"></span>
+                                    <span class="right">left</span>
+                                </p>
+                            </div>
+                            <p class="pledge-text">
+                                You get an ergonomic stand made of natural
+                                bamboo. You've helped us launch our promotional
+                                campaign, and you’ll be added to a special
+                                Backer member list.
+                            </p>
+    
+                            <p class="stats-wrapper">
+                                <span data-field25 class="left"></span>
                                 <span class="right">left</span>
                             </p>
                         </div>
-                        <p class="pledge-text">
-                            You get an ergonomic stand made of natural
-                            bamboo. You've helped us launch our promotional
-                            campaign, and you’ll be added to a special
-                            Backer member list.
-                        </p>
-
-                        <p class="stats-wrapper">
-                            <span class="left">101</span>
-                            <span class="right">left</span>
-                        </p>
-                    </div>
-
-                    <div class="pledge-option__submit-wrapper">
-                        <form action="#" class="pledge-form"  data-form>
-                            <h4>Enter your pledge</h4>
-
-                            <div class="form-control-container">
-                                <div class="form-control">
-                                    <label for="pledgeInput25">$</label>
+    
+                        <div class="pledge-option__submit-wrapper">
+                            <form action="#" class="pledge-form"  data-form>
+                                <h4>Enter your pledge</h4>
+    
+                                <div class="form-control-container">
+                                    <div class="form-control">
+                                        <label for="pledgeInput25">$</label>
+                                        <input
+                                            class=""
+                                            type="number"
+                                            id="pledgeInput25"
+                                            placeholder="25"
+                                            min="25"
+                                            max='1000'
+                                            step='1'
+                                        />
+                                    </div>
+    
+                                    <button id="submitBtn" type="submit">
+                                        Continue
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+    
+                    <article class="pledge-option">
+                        <div class="pledge-option__wrapper">
+                            <div class="header-wrapper">
+                                <label class="radio-wrapper">
                                     <input
-                                        class=""
-                                        type="number"
-                                        id="pledgeInput25"
-                                        placeholder="25"
-                                        min="25"
-                                        max='1000'
-                                        step='1'
+                                        type="radio"
+                                        name="pledge"
+                                        id="pledgeSelector75"
                                     />
-                                </div>
-
-                                <button id="submitBtn" type="submit">
-                                    Continue
-                                </button>
+    
+                                    <span class="checkmark"></span>
+                                    <div class="fixed-height">
+                                        <p class="radio-label mb">
+                                            Black Edition Stand
+                                        </p>
+                                        <p
+                                            class="
+                                                radio-label
+                                                radio-label--green
+                                            "
+                                        >
+                                            Pledge $75 or more
+                                        </p>
+                                    </div>
+                                </label>
+    
+                                <p class="stats-wrapper header-stats">
+                                    <span data-field75 class="left"></span>
+                                    <span class="right">left</span>
+                                </p>
                             </div>
-                        </form>
-                    </div>
-                </article>
-
-                <article class="pledge-option">
-                    <div class="pledge-option__wrapper">
-                        <div class="header-wrapper">
-                            <label class="radio-wrapper">
-                                <input
-                                    type="radio"
-                                    name="pledge"
-                                    id="pledgeSelector75"
-                                />
-
-                                <span class="checkmark"></span>
-                                <div class="fixed-height">
-                                    <p class="radio-label mb">
-                                        Black Edition Stand
-                                    </p>
-                                    <p
-                                        class="
-                                            radio-label
-                                            radio-label--green
-                                        "
-                                    >
-                                        Pledge $75 or more
-                                    </p>
-                                </div>
-                            </label>
-
-                            <p class="stats-wrapper header-stats">
-                                <span class="left">64</span>
+                            <p class="pledge-text">
+                                You get a Black Special Edition computer stand
+                                and a personal thank you. You’ll be added to our
+                                Backer member list. Shipping is included.
+                            </p>
+    
+                            <p class="stats-wrapper">
+                                <span data-field75 class="left"></span>
                                 <span class="right">left</span>
                             </p>
                         </div>
-                        <p class="pledge-text">
-                            You get a Black Special Edition computer stand
-                            and a personal thank you. You’ll be added to our
-                            Backer member list. Shipping is included.
-                        </p>
-
-                        <p class="stats-wrapper">
-                            <span class="left">64</span>
-                            <span class="right">left</span>
-                        </p>
-                    </div>
-
-                    <div class="pledge-option__submit-wrapper">
-                        <form action="#" class="pledge-form"  data-form>
-                            <h4>Enter your pledge</h4>
-
-                            <div class="form-control-container">
-                                <div class="form-control">
-                                    <label for="pledgeInput75">$</label>
+    
+                        <div class="pledge-option__submit-wrapper">
+                            <form action="#" class="pledge-form"  data-form>
+                                <h4>Enter your pledge</h4>
+    
+                                <div class="form-control-container">
+                                    <div class="form-control">
+                                        <label for="pledgeInput75">$</label>
+                                        <input
+                                            class=""
+                                            type="number"
+                                            id="pledgeInput75"
+                                            placeholder="75"
+                                            min="75"
+                                            max='1000'
+                                            step='1'
+                                        />
+                                    </div>
+    
+                                    <button id="submitBtn" type="submit">
+                                        Continue
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </article>
+    
+                    <article class="pledge-option overlay">
+                        <div class="pledge-option__wrapper">
+                            <div class="header-wrapper">
+                                <label class="radio-wrapper">
                                     <input
-                                        class=""
-                                        type="number"
-                                        id="pledgeInput75"
-                                        placeholder="75"
-                                        min="75"
-                                        max='1000'
-                                        step='1'
+                                        type="radio"
+                                        name="pledge"
+                                        id="pledgeSelector200"
                                     />
-                                </div>
-
-                                <button id="submitBtn" type="submit">
-                                    Continue
-                                </button>
+    
+                                    <span class="checkmark"></span>
+                                    <div class="fixed-height">
+                                        <p class="radio-label mb">
+                                            Mahogany Special Edition
+                                        </p>
+                                        <p
+                                            class="
+                                                radio-label
+                                                radio-label--green
+                                            "
+                                        >
+                                            Pledge $200 or more
+                                        </p>
+                                    </div>
+                                </label>
+    
+                                <p class="stats-wrapper header-stats">
+                                    <span data-field200 class="left"></span>
+                                    <span class="right">left</span>
+                                </p>
                             </div>
-                        </form>
-                    </div>
-                </article>
-
-                <article class="pledge-option overlay">
-                    <div class="pledge-option__wrapper">
-                        <div class="header-wrapper">
-                            <label class="radio-wrapper">
-                                <input
-                                    type="radio"
-                                    name="pledge"
-                                    id="pledgeSelector200"
-                                />
-
-                                <span class="checkmark"></span>
-                                <div class="fixed-height">
-                                    <p class="radio-label mb">
-                                        Mahogany Special Edition
-                                    </p>
-                                    <p
-                                        class="
-                                            radio-label
-                                            radio-label--green
-                                        "
-                                    >
-                                        Pledge $200 or more
-                                    </p>
-                                </div>
-                            </label>
-
-                            <p class="stats-wrapper header-stats">
-                                <span class="left">0</span>
+                            <p class="pledge-text">
+                                You get two Special Edition Mahogany stands, a
+                                Backer T-Shirt, and a personal thank you. You’ll
+                                be added to our Backer member list. Shipping is
+                                included.
+                            </p>
+    
+                            <p class="stats-wrapper">
+                                <span data-field200 class="left"></span>
                                 <span class="right">left</span>
                             </p>
                         </div>
-                        <p class="pledge-text">
-                            You get two Special Edition Mahogany stands, a
-                            Backer T-Shirt, and a personal thank you. You’ll
-                            be added to our Backer member list. Shipping is
-                            included.
-                        </p>
-
-                        <p class="stats-wrapper">
-                            <span class="left">0</span>
-                            <span class="right">left</span>
-                        </p>
-                    </div>
-
-                    <div class="pledge-option__submit-wrapper">
-                        <form action="#" class="pledge-form"  data-form>
-                            <h4>Enter your pledge</h4>
-
-                            <div class="form-control-container">
-                                <div class="form-control">
-                                    <label for="pledgeInput200">$</label>
-                                    <input
-                                        class=""
-                                        type="number"
-                                        id="pledgeInput200"
-                                        placeholder="0"
-                                        min="200"
-                                    />
+    
+                        <div class="pledge-option__submit-wrapper">
+                            <form action="#" class="pledge-form"  data-form>
+                                <h4>Enter your pledge</h4>
+    
+                                <div class="form-control-container">
+                                    <div class="form-control">
+                                        <label for="pledgeInput200">$</label>
+                                        <input
+                                            class=""
+                                            type="number"
+                                            id="pledgeInput200"
+                                            placeholder="200"
+                                            min="200"
+                                        />
+                                    </div>
+    
+                                    <button id="submitBtn" type="submit">
+                                        Continue
+                                    </button>
                                 </div>
-
-                                <button id="submitBtn" type="submit">
-                                    Continue
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </article>
+                            </form>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
+
         
         <div class="modal-confirmation">
             <div class="modal-wrapper">
