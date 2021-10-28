@@ -13,9 +13,14 @@ import {
     pledgeSelector200,
     formList,
     radioBtnList,
+    pledgeOptionList,
 } from "./variables";
 import Stats from "./statistics";
-import { updateModalPledgeUI, resetModalPledgeUI } from "./helper";
+import {
+    updateModalPledgeUI,
+    resetModalPledgeUI,
+    removePledgeActiveClass
+} from "./helper";
 
 // number calculation
 
@@ -74,8 +79,10 @@ formList.forEach((form) => {
     });
 });
 
+// handle check on pledge option
 radioBtnList.forEach((button) => {
-    button.addEventListener("change", () => {
+    button.addEventListener("click", () => {
+        removePledgeActiveClass();
         let pledgeOption = button.closest(".pledge-option");
 
         pledgeOption.classList.toggle("active", true);
@@ -86,7 +93,6 @@ radioBtnList.forEach((button) => {
 window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         modalPledge.classList.toggle("open-modal", false);
-
         mobileMenu.classList.toggle("open-modal", false);
         nav.classList.toggle("disabled-fade", false);
     }

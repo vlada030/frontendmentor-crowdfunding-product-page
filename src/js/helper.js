@@ -1,3 +1,5 @@
+import {pledgeOptionList} from './variables'
+
 export const updateModalPledgeUI = (clickedElement) => {
     const value = clickedElement.id.split("-")[1];
     //console.log(value);
@@ -28,11 +30,16 @@ export const updateModalPledgeUI = (clickedElement) => {
 };
 
 export const resetModalPledgeUI = () => {
-    const pledgeOptionsList = document.querySelectorAll('.pledge-option')
 
-    pledgeOptionsList.forEach(item => {
+    pledgeOptionList.forEach(item => {
         const radioInput = item.querySelector('[type="radio"]')
         radioInput.checked = false
+        item.classList.toggle('active', false)
+    })
+}
+
+export const removePledgeActiveClass = () => {
+    pledgeOptionList.forEach(item => {
         item.classList.toggle('active', false)
     })
 }

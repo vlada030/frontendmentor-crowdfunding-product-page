@@ -19,3 +19,4 @@ export const pledgeInput200 = document.getElementById("pledgeInput200");
 export const btnBookmark = document.getElementById("btnBookmark");
 
 export const radioBtnList = document.querySelectorAll('[type="radio"]')
+export const pledgeOptionList = document.querySelectorAll('.pledge-option')
