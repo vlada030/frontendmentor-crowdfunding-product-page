@@ -105,7 +105,15 @@
         border-radius: 8px;
         margin-bottom: 24px;
 
-        @include media(laptop) {
+        &.active {
+            border: 2px solid $colorPrimaryLight;
+            
+            .pledge-option__submit-wrapper {
+                display: block;
+            }
+            
+
+
         }
 
         &__wrapper {
@@ -120,7 +128,7 @@
             border-top: 1px solid rgba($colorDark, 0.15);
             padding: 24px 28px;
 
-            //display: none;
+            display: none;
         }
 
         .header-wrapper {
