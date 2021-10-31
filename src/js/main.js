@@ -5,21 +5,16 @@ import {
     btnBookmark,
     modalPledge,
     modalConfirmation,
-    pledgeInput75,
-    pledgeInput25,
-    pledgeInput200,
-    pledgeSelector25,
-    pledgeSelector75,
-    pledgeSelector200,
     formList,
     radioBtnList,
-    pledgeOptionList,
 } from "./variables";
+
 import Stats from "./statistics";
 import {
     updateModalPledgeUI,
     resetModalPledgeUI,
     removePledgeActiveClass,
+    adjustBackground
 } from "./helper";
 
 // initial calculation
@@ -53,10 +48,13 @@ window.addEventListener("click", (e) => {
     if (e.target.id === "openPledgeModal") {
         resetModalPledgeUI();
         modalPledge.classList.toggle("open-modal");
+        adjustBackground(modalPledge, true)
     }
 
     if (e.target.closest("#closePledgeModal")) {
         modalPledge.classList.toggle("open-modal");
+        adjustBackground(modalPledge, false)
+
     }
 
     if (
@@ -66,6 +64,8 @@ window.addEventListener("click", (e) => {
     ) {
         modalPledge.classList.toggle("open-modal");
         updateModalPledgeUI(e.target);
+        adjustBackground(modalPledge, true)
+
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -75,6 +75,7 @@ window.addEventListener("click", (e) => {
     // close Confirmation Dialog
     if (e.target.closest("#closeConfirmedModal")) {
         modalConfirmation.classList.toggle("open-modal", false);
+        adjustBackground(modalConfirmation, false)
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -112,6 +113,7 @@ formList.forEach((form) => {
         statistics.updateUI();
         modalPledge.classList.toggle("open-modal", false);
         modalConfirmation.classList.toggle("open-modal", true);
+        adjustBackground(modalConfirmation, true)
     });
 });
 
@@ -122,6 +124,7 @@ radioBtnList.forEach((button) => {
         let pledgeOption = button.closest(".pledge-option");
 
         pledgeOption.classList.toggle("active", true);
+        adjustBackground(modalPledge, true)
     });
 });
 
@@ -131,5 +134,6 @@ window.addEventListener("keydown", (e) => {
         modalPledge.classList.toggle("open-modal", false);
         mobileMenu.classList.toggle("open-modal", false);
         nav.classList.toggle("disabled-fade", false);
+        adjustBackground('default', false)
     }
 });
